@@ -1,0 +1,10 @@
+// const names=require('./module1')
+// const sayHi =require('./module2')
+// console.log(names)
+// const data =require('./6-alterway')
+// console.log(data)
+// require('./7-app')
+
+//  sayHi('susan')
+//  sayHi(names.john)
+//  sayHi(names.peter)
