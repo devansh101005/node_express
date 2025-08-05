@@ -3,3 +3,7 @@
 
 ##What is modules 
 ![alt text](image-1.png)
+
+//npm -Node package manager
+npmjs.com
+//pacahge is a folder with code 
