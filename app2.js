@@ -137,16 +137,112 @@
 
 //npm 
 
-const _ =require('lodash')  //testing lodash
+// const _ =require('lodash')  //testing lodash
 
-const items =[1,[2,[3,[4]]]]
-const newItems = _.flattenDeep(items)
-console.log(newItems)
-console.log("hello")
-
-
+// const items =[1,[2,[3,[4]]]]
+// const newItems = _.flattenDeep(items)
+// console.log(newItems)
+// console.log("hello")
 
 
+//event loop
+
+// const {readFile} =require('fs')
+
+// console.log('started a first task')
+
+// //check file path
+// //while running in 1-read-file.js iska path change kar dena 
+// readFile('./content/first.txt','utf8',(err,result) => {
+//     if (err) {
+//         console.log(err)
+//         return
+//     }
+//     console.log(result)
+//     console.log('completerd first task')
+// })
+// console.log('starting new task')
+
+//started os process
+
+// console.log('first')
+//     setTimeout(() => {
+   
+//     console.log('second')
+
+//     })
+//     console.log('third')
+
+//     //completed n exited
+
+// //interval
+
+
+// setInterval(()=>  {
+//     console.log('hello world')
+// },2000)
+// console.log("i wil run first")
+// //process stays alive untill killed
+
+
+// const http =require('http')
+
+// const server =http.createServer((req,res) => {
+//     console.log('request event')
+//     res.end ('Hello')
+// })
+
+// server.listen(5000,() => {
+//     console.log('Server listing on port :5000')
+// })
+
+// const http=require('http')
+
+// const server =http.createServer((req,res)=> {
+// if(req.url==='/') {
+//     res.end('Home page')
+// }
+// if(req.url==='/about') {
+//     //BLOCKING CODE !!!
+//     for(i=0;i<1000;i++){
+//         for(j=0;j<1000;j++){
+//             console.log(`${i}  ${j}`)
+//         }
+//     }
+//     res.end('About page ')
+// }
+// res.end('error page')
+
+
+// })
+// server.listen(5000,()=> {
+//     console.log('server is listening on port 5000...')
+// })
+
+
+//async pattern setup promise
+const {readFile} =require('fs')
+
+const getText =(path) => {
+    return new Promise((resolve,reject)=> {
+    
+readFile(path,'utf8',(err,data)=> {
+    if(err) {
+        reject(err) 
+    } else {
+        console.log(data)
+    }
+})
+    
+    })
+}
+getText('./content/first.txt')
+.then((result)=> console.log(result))
+.catch((err)=> console.log(err))
+
+const start =async() => {
+    const first =await getText
+}
 
 
 
